@@ -43,4 +43,4 @@ if selected_items:
         st.success("Your smoothie is ordered!", icon='✅')
 
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response)
+st.text(smoothiefroot_response.json())
