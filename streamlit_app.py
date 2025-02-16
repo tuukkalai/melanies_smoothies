@@ -24,7 +24,7 @@ if selected_items:
     for selected_item in selected_items:
         ingredients_string += selected_item + " "
         st.subheader(f"{selected_item} Nutrition information")
-        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + selected_item)
         sf_df = st.dataframe(smoothiefroot_response.json(), use_container_width = True)
 
     query = """insert into smoothies.public.orders (ingredients, name_on_order)
