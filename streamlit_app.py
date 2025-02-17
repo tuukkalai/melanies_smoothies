@@ -16,7 +16,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col("fruit
 
 # Converting Snowpark dataframe to pandas
 pd_df = my_dataframe.to_pandas()
-st.dataframe(pf_df)
+st.dataframe(pd_df)
 st.stop()
 
 selected_items = st.multiselect(
